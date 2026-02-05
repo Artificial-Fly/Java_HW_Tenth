@@ -28,10 +28,10 @@ public class Company {
         credit = 0;
     }
 
-    public int applyDeals(Deal[] deals){
+    public int applyDeals(Deal[] deals) {
         for (int i = 0; i < deals.length; i++) {
             shiftMoney(deals[i].getDebitChange());
-            shiftMoney((-1)*deals[i].getCreditChange());
+            shiftMoney((-1) * deals[i].getCreditChange());
         }
         int incomeMinusExpenses = Math.max(debit - credit, 0);
         payTaxes();
